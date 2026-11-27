@@ -559,7 +559,7 @@ class Client:
             raise ValueError("Invalid port number, port must be between 1 and 65535")
 
         if args.limit is not None:
-            if args.limit >= MAX_PROCESS_LIMIT:
+            if args.limit > MAX_PROCESS_LIMIT:
                 args.limit = MAX_PROCESS_LIMIT
 
                 if args.verbose:
